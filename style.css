@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: #1cabe2;
+}
+section{
+    margin-top: 80px;
+}
+section .container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+section h1{
+    margin-left: 10px;
+    font-weight: bold;  
+}
+.audio-player-container{
+    margin-block: 40px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(187, 184, 184, 0.5); 
+    width: 40%;
+    margin-inline: auto;
+    
+    
+}
+.first-section-card{
+    padding: 0 30px;
+}
+
+#player-name{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.audio-player-card p{
+    font-weight: lighter;
+    font-size: 15px;
+}
+.toggle-btn-styles{
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 30px;
+}
+.first-section-card{
+    padding-top:25px ;
+}
+.description{
+    background-color: #f0f0f0;
+    padding: 10px 30px;
+    overflow-y: scroll;
+    height: 250px;
+}
+.audio-players-list{
+    display: flex;
+    flex-direction: column;
+}
+.audio-players-list button{
+    background-color: transparent;
+    border: none;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+    padding-block: 10px;
+    margin: 0;
+    
+}
+.audio-players-list hr{
+    padding: 0;
+    margin: 0;
+}
+
+.playList h4{
+    font-weight: 500;   
+}
+.playList{
+    
+    background-color: #fafafa;
+    padding: 10px 30px;
+}
+audio{
+    background-color: transparent;
+    color: black;
+}
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: white;
+  color: black;
+  outline: none !important;
+  text-align: left;
+}
+
+audio::-webkit-media-controls-play-button {
+    transform: scale(2, 2);
+    background-color: transparent !important;
+    outline: none !important;
+}
+
