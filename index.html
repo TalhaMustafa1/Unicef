@@ -24,97 +24,139 @@
     <section>
         <div class="container ">
             <h1>Audio Guide</h1>
-            <img src="images/png-clipart-unicef-angola-united-nations-logo-unicef-burundi-child-thumbnail.png" alt=""
-                width="180" height="80">
         </div>
 
         <!-- Audio Player Starts -->
-        <div class=" audio-player-container">
-            <div class="audio-player-card">
-                <div class="first-section-card">
-
-                
-                <h2 id="player-name">5000. Introduction</h2>
-                <p id="subdescription">Look Again: European Paintings 1300–1800</p>
-
-                <audio id="audio-player" controls style="background-color: transparent; width: 100%;">
-                    <source src="audioFiles/sample-3s.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-
+        <div class="audio-image-section container ">
+            
+            <div class=" audio-player-container ">
+                <div class="audio-player-card">
+                    <div class="first-section-card">
+                    <h2 id="player-name">5000. Introduction</h2>
+                    <p id="subdescription">Look Again: European Paintings 1300–1800</p>
+    
+                    <audio id="audio-player" controls style="background-color: transparent; width: 100%;">
+                        <source src="audioFiles/sample-3s.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+    
+                    </div>
+                    <div class="description"  >
+                        <p id="player-description" >NARRATOR:
+                            Hello, and welcome to the European Paintings galleries.
+                            
+                            In this Audio Guide, you’re invited to "look again" at some of The Met's much-loved masterpieces and discover...what’s compelling about them today?
+                            
+                            [MONTAGE]
+                            
+                            DR. ORNA GURALNIK:
+                            It made me laugh a lot, this painting. It's just like, wild.
+                            
+                            PRIYANCA RAO:
+                            This painting really reminds me of my childhood.
+                            
+                            RABBI SAMANTHA FRANK:
+                            It's an image that maybe reinforces stereotypes, and it doesn't challenge you.
+                            
+                            WOLOHOJIAN:
+                            It's very much the way today you often have a registry when you get married and fill a household with wonderful things.
+                            
+                            TIFFANY RACCO:
+                            ...even though it plays to a certain shock value, it likely wasn’t seen as bizarre per se.
+                            
+                            NARRATOR:
+                            You’ll hear ideas from Met curators and experts. And how they respond to questions and observations from visitors like you.
+                            
+                            [MONTAGE]
+                            
+                            LINDA CIVITELLO:
+                            I'm a food historian.
+                            
+                            JIM NATAL:
+                            I’m a poet.
+                            
+                            ORNA GURALNIK:
+                            I am a clinical psychologist and a psychoanalyst.
+                            
+                            BETHANY PASTORIAL:
+                            I’m an equine photographer.
+                            
+                            NARRATOR:
+                            We all look through unique lenses. What appears? For some, it’s ideas about family and relationships. Others question how they present class or identity.
+                            
+                            JIM NATAL:
+                            You know, being human is still being human, whether you’re in the 1600s or in the 2000s.
+                            
+                            NARRATOR:
+                            Paintings can be personal, and these galleries hold endless perspectives across time. What’s yours?
+                            
+                            This Audio Guide is sponsored by Bloomberg Philanthropies.</p>  
+                                          
+                    </div> 
+    
+                    <button id="toggle-description" onclick="toggleDescription()" class="toggle-btn-styles" style="display: none;">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 48 48"><path fill="currentColor" stroke="currentColor" stroke-width="0.5" d="M39.777 35 42 32.923 23.989 14 6 32.921 8.223 35l15.813-16.888z"></path></svg></span>
+                        Show Transcript   </button>
+                        <button id="hide-description" onclick="hideDescription()"class="toggle-btn-styles">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 48 48">
+                                <path fill="currentColor" stroke="currentColor" stroke-width="0.5" d="M8.223 13.112 6 16.191 23.989 35.112 42 16.191 39.777 13.112 23.964 30z"></path>
+                              </svg>
+                              
+                            Hide Transcript </button>                 
+                    <div class="playList">
+                        <h4>Playlist</h4>
+                    <div class="audio-players-list">
+                        <button onclick="changePlayer('audioFiles/sample-3s', '1. Welcome Wall', 'description','Look Again: European Paintings 1300–1800')">1. Welcome Wall</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '1A. Experience Introduction', 'description','Fra Filippo Lippi, 1440')">1A. Experience Introduction</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '2A. First Notes – Panel Description', 'description','Fra Filippo Lippi, 1440')">2A. First Notes – Panel Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '2B. First Notes – Experience Description', 'description','Fra Filippo Lippi, 1440')">2B. First Notes – Experience Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '2C. First Notes – Welcome Video', 'description','Fra Filippo Lippi, 1440')">2C. First Notes – Welcome Video</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '3A. Heartbeats – Panel Description', 'description','Fra Filippo Lippi, 1440')">3A. Heartbeats – Panel Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '3B. Heartbeats – Experience Description', 'description','Fra Filippo Lippi, 1440')">3B. Heartbeats – Experience Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '3C. Heartbeats – Interactive Experience', 'description','Fra Filippo Lippi, 1440')">3C. Heartbeats – Interactive Experience</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '4A. Living Lyrics – Panel Description', 'description','Fra Filippo Lippi, 1440')">4A. Living Lyrics – Panel Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '4B. Living Lyrics – Experience Description', 'description','Fra Filippo Lippi, 1440')">4B. Living Lyrics – Experience Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '4C. Living Lyrics – Interactive Experience', 'description','Fra Filippo Lippi, 1440')">4C. Living Lyrics – Interactive Experience</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '5A. Voices of Power – Panel Description', 'description','Fra Filippo Lippi, 1440')">5A. Voices of Power – Panel Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '5B. Voices of Power – Experience Description', 'description','Fra Filippo Lippi, 1440')">5B. Voices of Power – Experience Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '5C. Voices of Power – Interactive Experience', 'description','Fra Filippo Lippi, 1440')">5C. Voices of Power – Interactive Experience</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '6A. Our Song – Panel Description', 'description','Fra Filippo Lippi, 1440')">6A. Our Song – Panel Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '6B. Our Song – Experience/Interact', 'description','Fra Filippo Lippi, 1440')">6B. Our Song – Experience/Interactive Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '7A. Harmony Hall – Panel Description', 'description','Fra Filippo Lippi, 1440')">7A. Harmony Hall – Panel Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '7B. Harmony Hall – Experience Description', 'description','Fra Filippo Lippi, 1440')">7B. Harmony Hall – Experience Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '8A. Take Action – Experience Description', 'description','Fra Filippo Lippi, 1440')">8A. Take Action – Experience Description</button>
+                        <hr>
+                        <button onclick="changePlayer('audioFiles/sample-6s', '8B. Take Action – Ending Sequence and', 'description','Fra Filippo Lippi, 1440')">8B. Take Action – Ending Sequence and</button>
+                    
+                    
+                    </div>
                 </div>
-                <div class="description"  >
-                    <p id="player-description" >NARRATOR:
-                        Hello, and welcome to the European Paintings galleries.
-                        
-                        In this Audio Guide, you’re invited to "look again" at some of The Met's much-loved masterpieces and discover...what’s compelling about them today?
-                        
-                        [MONTAGE]
-                        
-                        DR. ORNA GURALNIK:
-                        It made me laugh a lot, this painting. It's just like, wild.
-                        
-                        PRIYANCA RAO:
-                        This painting really reminds me of my childhood.
-                        
-                        RABBI SAMANTHA FRANK:
-                        It's an image that maybe reinforces stereotypes, and it doesn't challenge you.
-                        
-                        WOLOHOJIAN:
-                        It's very much the way today you often have a registry when you get married and fill a household with wonderful things.
-                        
-                        TIFFANY RACCO:
-                        ...even though it plays to a certain shock value, it likely wasn’t seen as bizarre per se.
-                        
-                        NARRATOR:
-                        You’ll hear ideas from Met curators and experts. And how they respond to questions and observations from visitors like you.
-                        
-                        [MONTAGE]
-                        
-                        LINDA CIVITELLO:
-                        I'm a food historian.
-                        
-                        JIM NATAL:
-                        I’m a poet.
-                        
-                        ORNA GURALNIK:
-                        I am a clinical psychologist and a psychoanalyst.
-                        
-                        BETHANY PASTORIAL:
-                        I’m an equine photographer.
-                        
-                        NARRATOR:
-                        We all look through unique lenses. What appears? For some, it’s ideas about family and relationships. Others question how they present class or identity.
-                        
-                        JIM NATAL:
-                        You know, being human is still being human, whether you’re in the 1600s or in the 2000s.
-                        
-                        NARRATOR:
-                        Paintings can be personal, and these galleries hold endless perspectives across time. What’s yours?
-                        
-                        This Audio Guide is sponsored by Bloomberg Philanthropies.</p>  
-                                      
-                </div> 
-
-                <button id="toggle-description" onclick="toggleDescription()" class="toggle-btn-styles" style="display: none;">
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 48 48"><path fill="currentColor" stroke="currentColor" stroke-width="0.5" d="M39.777 35 42 32.923 23.989 14 6 32.921 8.223 35l15.813-16.888z"></path></svg></span>
-                    Show Transcript   </button>
-                    <button id="hide-description" onclick="hideDescription()"class="toggle-btn-styles">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 48 48">
-                            <path fill="currentColor" stroke="currentColor" stroke-width="0.5" d="M8.223 13.112 6 16.191 23.989 35.112 42 16.191 39.777 13.112 23.964 30z"></path>
-                          </svg>
-                          
-                        Hide Transcript </button>                 
-                <div class="playList">
-                    <h4>Playlist</h4>
-                <div class="audio-players-list">
-                    <button onclick="changePlayer('audioFiles/sample-3s', '5000. Introduction', 'description','Look Again: European Paintings 1300–1800')">5000. Introduction</button>
-                    <hr>
-                    <button onclick="changePlayer('audioFiles/sample-6s', '5058. Portrait of a Woman with a Man at a Casement', 'description','Fra Filippo Lippi, 1440')">5058. Portrait of a Woman with a Man at a Casement</button>
                 </div>
             </div>
+            <div class="img-right " >
+                <img src="images/Heartsprings.png" alt="" class="img-fluid">
             </div>
+        
         </div>
+
         <!-- Audio Player Ends -->
     </section>
     <!-- NavBar  Ends-->
