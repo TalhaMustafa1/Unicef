@@ -60,10 +60,10 @@
                         <h2>Playlist</h2>
                     <div class="audio-players-list">
                         <ol>
-                            <li> <button onclick="changePlayer('audioFiles/sample-3s', '1. Welcome Wall', 'description','Look Again: European Paintings 1300–1800')" ondblclick="focusAudioPlayer()">1. Welcome Wall</button></li>
-                            <li><button onclick="changePlayer('audioFiles/sample-6s', '1A. Experience Introduction', 'description','Fra Filippo Lippi, 1440')">1A. Experience Introduction</button></li>
-                            <li><button onclick="changePlayer('audioFiles/sample-6s', '2A. First Notes – Panel Description', 'description','Fra Filippo Lippi, 1440')">2A. First Notes – Panel Description</button></li>
-                            <li> <button onclick="changePlayer('audioFiles/sample-6s', '2B. First Notes – Experience Description', 'description','Fra Filippo Lippi, 1440')">2B. First Notes – Experience Description</button></li>
+                            <li> <button onclick="changePlayer('audioFiles/sample-3s', '1. Welcome Wall', 'description','Look Again: European Paintings 1300–1800')" >1. Welcome Wall</button></li>
+                            <li><button onclick="changePlayer('audioFiles/sample-6s', '1A. Experience Introduction', 'description','Fra Filippo Lippi, 1440')" ondblclick="focusAudioPlayer()">1A. Experience Introduction</button></li>
+                            <li><button onclick="changePlayer('audioFiles/sample-6s', '2A. First Notes – Panel Description', 'description','Fra Filippo Lippi, 1440')" ondblclick="focusAudioPlayer()">2A. First Notes – Panel Description</button></li>
+                            <li> <button onclick="changePlayer('audioFiles/sample-6s', '2B. First Notes – Experience Description', 'description','Fra Filippo Lippi, 1440')" ondblclick="focusAudioPlayer()">2B. First Notes – Experience Description</button></li>
                        <li><button onclick="changePlayer('audioFiles/sample-6s', '2C. First Notes – Welcome Video', 'description','Fra Filippo Lippi, 1440')">2C. First Notes – Welcome Video</button></li>
 
                        <li><button onclick="changePlayer('audioFiles/sample-6s', '3A. Heartbeats – Panel Description', 'description','Fra Filippo Lippi, 1440')">3A. Heartbeats – Panel Description</button></li>
@@ -126,6 +126,9 @@
         <script>
             function focusAudioPlayer() {
                 document.getElementById('audio-player').focus();
+                document.getElementById('audio-player').addEventListener('focus', function() {
+        this.play();
+    });
                         }
 
         </script>
