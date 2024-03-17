@@ -15,6 +15,7 @@ function toggleDescription() {
         toggleButton.style.display = 'none';
         hideDescription.style.display='block'; // Hide the toggle button
     }
+    description.focus();
 }
 
 function hideDescription() {
@@ -23,5 +24,7 @@ function hideDescription() {
     var hideDescription=document.getElementById('hide-description');
     description.style.display = 'none';
     hideDescription.style.display='none';
-    toggleButton.style.display = 'block'; // Show the toggle button
+    toggleButton.style.display = 'block';
+    // Show the toggle button
+    toggleButton.focus();
 }
