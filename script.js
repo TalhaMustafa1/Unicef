@@ -1,5 +1,6 @@
 
 function changePlayer(source, name, description, subdescription) {
+    document.getElementById('player-name').focus();
     var audioPlayer = document.getElementById('audio-player');
     audioPlayer.src = source + '.mp3';
     audioPlayer.play(); // Play the audio directly
@@ -7,6 +8,8 @@ function changePlayer(source, name, description, subdescription) {
     document.getElementById('player-name').textContent = name;
     document.getElementById('player-description').textContent = description;
     document.getElementById('subdescription').textContent = subdescription;
+    
+    
 }
 
 function toggleDescription() {

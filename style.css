@@ -108,6 +108,9 @@ audio::-webkit-media-controls-play-button {
     display: flex;
     justify-content: space-between;
 } 
+#player-name:focus {
+    outline: none; /* Remove the outline when focused */
+}
 @media only screen and (max-width: 1008px) {
     .audio-player-container{
         margin-block: 40px;
