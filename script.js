@@ -4,7 +4,7 @@ function changePlayer(source, name, description,subdescription) {
     document.getElementById('player-name').textContent = name;
     document.getElementById('player-description').textContent = description;
     document.getElementById('subdescription').textContent=subdescription;
-    document.getElementByID('player-name').focus();
+    document.getElementById('player-name').focus();
 }
 
 function toggleDescription() {
