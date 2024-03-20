@@ -133,5 +133,12 @@ audio::-webkit-media-controls-play-button {
         display: flex;
         justify-content: center;
     }
+    .audio-player h1{
+        margin-inline: auto;
+    }
+    .original-website a{
+        margin-left:0px !important ;
+        margin-inline: auto !important;
+    }
   }
 
