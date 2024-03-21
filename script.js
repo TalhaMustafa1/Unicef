@@ -6,7 +6,7 @@ function changePlayer(source, name, description, subdescription) {
     audioPlayer.play(); // Play the audio directly
     
     document.getElementById('player-name').textContent = name;
-    document.getElementById('player-description').textContent = description;
+    document.getElementById('player-description').innerHTML = description;
     document.getElementById('subdescription').textContent = subdescription;
     
     
