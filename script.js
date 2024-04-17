@@ -6,9 +6,9 @@ function changePlayer(source, name, description, subdescription) {
     document.getElementById('player-name').textContent = name;
     document.getElementById('player-description').innerHTML = description;
     document.getElementById('subdescription').textContent = subdescription;
-    
-    
+       
 }
+
 
 function toggleDescription() {
     var description = document.querySelector('.description');
